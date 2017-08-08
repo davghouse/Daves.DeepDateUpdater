@@ -1,5 +1,4 @@
-﻿using Daves.DeepDateUpdater.Metadata;
-using Microsoft.Data.Tools.Schema.Sql.UnitTesting;
+﻿using Microsoft.Data.Tools.Schema.Sql.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Data;
 using System.Data.SqlClient;

@@ -65,6 +65,7 @@
     <None Include="Data\Provinces.data.sql" />
     <None Include="Data\Residents.data.sql" />
     <None Include="Daves.DeepDateUpdater.IntegrationTests.Database.publish.xml" />
+    <None Include="Daves.DeepDateUpdater.IntegrationTests.Database.sqlproj.user" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Nations.sql" />
