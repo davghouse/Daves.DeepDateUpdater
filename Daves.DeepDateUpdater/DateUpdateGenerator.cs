@@ -44,7 +44,7 @@ namespace Daves.DeepDateUpdater
                 GenerateDependentlyReferencedTableInsert(vertex);
             }
             foreach (var vertex in ReferenceGraph
-                .Where(v => v.Table.HasDateTypeColumns(ExcludedDateTypeColumns)))
+                .Where(v => v.Table.HasUpdatableDateTypeColumns(ExcludedDateTypeColumns)))
             {
                 GenerateDateUpdates(vertex);
             }
@@ -77,7 +77,7 @@ namespace Daves.DeepDateUpdater
         protected virtual void GenerateDateUpdates(ReferenceGraph.Vertex vertex)
         {
             var table = vertex.Table;
-            var setClauses = table.GetDateTypeColumns(ExcludedDateTypeColumns)
+            var setClauses = table.GetUpdatableDateTypeColumns(ExcludedDateTypeColumns)
                 .Select(c => $"[{c.Name}] = DATEADD({DatePart}, @{DatePart}Delta, [{c.Name}])");
             if (TableVariableNames.TryGetValue(table, out string tableVariableName))
             {

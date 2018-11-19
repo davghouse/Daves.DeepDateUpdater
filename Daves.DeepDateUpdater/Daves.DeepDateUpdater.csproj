@@ -11,10 +11,12 @@
     <RepositoryUrl>https://github.com/davghouse/Daves.DeepDateUpdater.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>sql, deep, date, update, procedure, generator, root, metadata</PackageTags>
-    <PackageReleaseNotes>1.0.0: First release</PackageReleaseNotes>
+    <PackageReleaseNotes>1.0.1: Stopped trying to update unupdatable computed columns
+1.0.0: First release</PackageReleaseNotes>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IncludeSymbols>true</IncludeSymbols>
     <IncludeSource>true</IncludeSource>
+    <Version>1.0.1</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="System.Data.Common" Version="4.3.0" />

@@ -64,7 +64,7 @@ namespace Daves.DeepDateUpdater
             beingVisited.Remove(table);
 
             // If table has a date column or any of its recursive dependents do (i.e., any are in the stack already), add.
-            if (table.HasDateTypeColumns(ExcludedDateTypeColumns) || dependentTables.Any(t => tables.Contains(t)))
+            if (table.HasUpdatableDateTypeColumns(ExcludedDateTypeColumns) || dependentTables.Any(t => tables.Contains(t)))
             {
                 tables.Push(table);
             }

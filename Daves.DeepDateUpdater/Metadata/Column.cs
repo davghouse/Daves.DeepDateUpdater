@@ -36,7 +36,7 @@ namespace Daves.DeepDateUpdater.Metadata
         public string LowercaseSpacelessName
             => Name.ToLowercaseSpacelessName();
 
-        public virtual bool IsCopyable
+        public virtual bool IsUpdatable
             => !IsIdentity && !IsComputed;
 
         public override string ToString()

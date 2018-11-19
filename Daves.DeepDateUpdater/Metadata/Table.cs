@@ -62,11 +62,13 @@ namespace Daves.DeepDateUpdater.Metadata
         public Column FindColumn(string columnName)
             => Columns.Single(c => c.Name == columnName);
 
-        public IEnumerable<Column> GetDateTypeColumns(IReadOnlyList<Column> excludedDateTypeColumns = null)
-            => Columns.Where(c => c.IsDateType && !(excludedDateTypeColumns?.Contains(c) ?? false));
+        public IEnumerable<Column> GetUpdatableDateTypeColumns(IReadOnlyList<Column> excludedDateTypeColumns = null)
+            => Columns
+            .Where(c => c.IsDateType && c.IsUpdatable)
+            .Where(c => !(excludedDateTypeColumns?.Contains(c) ?? false));
 
-        public bool HasDateTypeColumns(IReadOnlyList<Column> excludedDateTypeColumns = null)
-            => GetDateTypeColumns(excludedDateTypeColumns).Any();
+        public bool HasUpdatableDateTypeColumns(IReadOnlyList<Column> excludedDateTypeColumns = null)
+            => GetUpdatableDateTypeColumns(excludedDateTypeColumns).Any();
 
         public override string ToString()
             => $"{Schema}.{Name}";

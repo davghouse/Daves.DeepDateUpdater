@@ -44,6 +44,7 @@ namespace Daves.DeepDateUpdater.UnitTests.SampleCatalogs
                 new Column(tableId: 4, name: "LeaderResidentID", columnId: 5, isNullable: true),
                 new Column(tableId: 4, name: "FirstRevoltDate", columnId: 6, isNullable: true, isDateType: true),
                 new Column(tableId: 4, name: "LastRevoltDate", columnId: 7, isNullable: true, isDateType: true),
+                new Column(tableId: 4, name: "ComputedRevoltDate", columnId: 8, isNullable: true, isDateType: true, isComputed: true),
                 new Column(tableId: 100, name: "ID", columnId: 1, isNullable: false, isIdentity: true),
                 new Column(tableId: 100, name: "Name", columnId: 2, isNullable: false),
                 new Column(tableId: 100, name: "ProvinceID", columnId: 3, isNullable: false),
